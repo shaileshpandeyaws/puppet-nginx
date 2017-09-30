@@ -1,19 +1,19 @@
 class nginx::service (
-  String $service_ensure               = $::nginx::service_ensure,
-  String $service_name                 = $::nginx::service_name,
-  String $service_enable               = $::nginx::service_enable,
-  String $service_pattern              = $::nginx::service_pattern,
-  String $service_hasstatus            = $::nginx::service_hasstatus,
-  String $service_hasrestart           = $::nginx::service_hasrestart,
+  String $service_ensure                = $::nginx::service_ensure,
+  String $service_name                  = $::nginx::service_name,
+  String $service_pattern               = $::nginx::service_pattern,
+  Boolean $enable                       = $::nginx::service_enable,
+  Boolean $hasstatus                    = $::nginx::service_hasstatus,
+  Boolean $hasrestart                   = $::nginx::service_hasrestart,
 
 ){
 
-  service { 'Restart nginx service' :
+  service { 'Restart_nginx_service' :
     ensure     => $service_ensure,
     name       => $service_name,
-    enable     => $service_enable,
-    hasstatus  => $service_hasstatus,
-    hasrestart => $service_hasrestart,
+    enable     => $enable,
+    hasstatus  => $hasstatus,
+    hasrestart => $hasrestart,
     pattern    => $service_pattern,
   }
 

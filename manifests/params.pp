@@ -25,11 +25,11 @@ class nginx::params {
     default  => $config_confd,
   } 
 
-  $service_name       = 'nginx'
-  $service_ensure     = 'running'
-  $service_pattern    = 'nginx'
-  $service_enable     = true
-  $service_hasstatus  = true
-  $service_hasrestart = true
-  $docroot            = '/usr/share/nginx'
+  $service_name               = 'nginx'
+  $service_ensure             = 'running'
+  $service_pattern            = 'nginx'
+  $service_enable             = true
+  $service_hasstatus          = true
+  $service_hasrestart         = true
+  $docroot                    = '/usr/share/nginx'
 }
