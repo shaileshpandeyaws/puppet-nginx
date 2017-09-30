@@ -8,7 +8,7 @@ class nginx::service (
 
 ){
 
-  service { 'Restart_nginx_service' :
+  service { 'nginx_service' :
     ensure     => $service_ensure,
     name       => $service_name,
     enable     => $enable,
